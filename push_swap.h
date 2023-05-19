@@ -80,7 +80,6 @@ void	ft_sort_500(struct s_var *v);
 void	ft_sort_chunck(struct s_var *v);
 void	ft_find_edge(struct s_var *v, int chunck);
 void	ft_find_place(struct s_var *v, int num);
-void	ft_read_list(struct s_list *l);
-//void	ft_find_max(struct s_var *v);
+//void	ft_read_list(struct s_list *l);
 
 #endif
