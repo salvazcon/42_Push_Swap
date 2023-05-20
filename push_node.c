@@ -25,6 +25,8 @@ void	ft_fill_list(struct s_var *v, int num)
 	struct s_node	*aux;
 
 	n = ft_calloc(sizeof(struct s_node), 1);
+	if (!n)
+		ft_error(v);
 	n = ft_create_node(n, num);
 	v->len_a++;
 	if (!v->a->cab)
