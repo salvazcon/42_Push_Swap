@@ -46,6 +46,7 @@ void	ft_fill_list_rev(struct s_list *l, int num)
 	struct s_node	*aux;
 
 	n = ft_calloc(sizeof(struct s_node), 1);
+	//Control de errores bro, optimiza.
 	n = ft_create_node(n, num);
 	if (!l->cab)
 		l->cab = n;
