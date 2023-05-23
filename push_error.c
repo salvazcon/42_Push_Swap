@@ -33,6 +33,7 @@ void	ft_free(struct s_var *v)
 		ft_free_list(v->b);
 	if (v->aux)
 		free(v->aux);
+	//Libera el split en caso de existir.
 	if (v)
 		free(v);
 }
