@@ -6,7 +6,7 @@
 /*   By: saazcon- <saazcon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 21:52:20 by saazcon-          #+#    #+#             */
-/*   Updated: 2023/09/08 15:37:19 by saazcon-         ###   ########.fr       */
+/*   Updated: 2023/09/08 15:40:49 by saazcon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,11 @@ void	ft_reserve(struct s_var *v)
 	v->i = 0;
 }
 
-void	ft_leaks(void)
-{
-	system("leaks -q push_swap");
-}
 
 int	main(int argc, char **argv)
 {
 	struct s_var	*v;
 
-	atexit(ft_leaks);
 	if (argc < 2)
 		return (0);
 	v = ft_calloc(sizeof(struct s_var), 1);
@@ -68,5 +63,10 @@ void	ft_read_list(struct s_list *l)
 		printf("%d\n", aux->number);
 		aux = aux->sig;
 	}
+}
+void	ft_leaks(void)
+{
+	system("leaks -q push_swap");
+	atexit(ft_leaks);
 }
 */
