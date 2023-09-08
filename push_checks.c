@@ -6,7 +6,7 @@
 /*   By: saazcon- <saazcon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 20:10:23 by saazcon-          #+#    #+#             */
-/*   Updated: 2023/04/26 23:27:33 by saazcon-         ###   ########.fr       */
+/*   Updated: 2023/09/08 15:38:42 by saazcon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ void	ft_check_letters(struct s_var *v, int i)
 	while (v->split[i][j])
 	{
 		if ((v->split[i][j]) < 48 || (v->split[i][j] > 57))
+		{
+			ft_free_double(v->split);
 			ft_error(v);
+		}
 		j++;
 	}
 }

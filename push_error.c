@@ -6,7 +6,7 @@
 /*   By: saazcon- <saazcon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 21:33:58 by saazcon-          #+#    #+#             */
-/*   Updated: 2023/05/15 21:19:12 by saazcon-         ###   ########.fr       */
+/*   Updated: 2023/09/08 15:36:52 by saazcon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,19 @@ void	ft_free_list(struct s_list *l)
 	free(l);
 }
 
+void	ft_free_double(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
 void	ft_free(struct s_var *v)
 {
 	if (v->a)
@@ -33,7 +46,6 @@ void	ft_free(struct s_var *v)
 		ft_free_list(v->b);
 	if (v->aux)
 		free(v->aux);
-	//Libera el split en caso de existir.
 	if (v)
 		free(v);
 }

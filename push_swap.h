@@ -6,7 +6,7 @@
 /*   By: saazcon- <saazcon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 22:08:38 by saazcon-          #+#    #+#             */
-/*   Updated: 2023/05/19 20:33:30 by saazcon-         ###   ########.fr       */
+/*   Updated: 2023/09/08 15:37:44 by saazcon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ char	**ft_split(char *s, char c);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_error(struct s_var *v);
 void	ft_free(struct s_var *v);
+void	ft_free_double(char **str);
 void	ft_check_numbers(struct s_var *v);
 void	ft_check_letters(struct s_var *v, int i);
 void	ft_fill_list(struct s_var *v, int num);
